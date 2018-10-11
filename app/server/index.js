@@ -11,10 +11,6 @@ import path           from 'path';
 import {createServer} from 'http';
 import socketio       from 'socket.io';
 import redis          from 'socket.io-redis';
-import dotenv         from 'dotenv';
-
-// load environment files from .env file
-dotenv.load();
 
 
 // create express application, server and socketio instance

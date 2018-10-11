@@ -1,5 +1,9 @@
-FROM node:0.12-onbuild
+FROM node:alpine
 
-WORKDIR /usr/src/app
-RUN npm install grunt-cli
-RUN ./node_modules/.bin/grunt build
+COPY . .
+
+RUN npm install -g grunt-cli
+RUN npm install
+RUN grunt build
+
+CMD ["npm", "start"]
