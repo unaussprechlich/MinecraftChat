@@ -32,7 +32,7 @@ module.exports = function($scope, socket, servers) {
       socket.emit('server:connect', {
         username: $scope.username,
         password: $scope.password,
-        hostname: $scope.ip,
+        hostname: $scope.ip || "hypixel.net",
         port: $scope.port || 25565,
         version: $scope.version || "1.10"
       });
